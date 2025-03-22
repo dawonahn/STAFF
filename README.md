@@ -1,9 +1,9 @@
 # Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation
 
-This repository contains the Python based implementation for the paper *Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation*.
+This repository contains the Python based implementation for the paper *Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation, Dawon Ahn*, JunGi-Jang*, Evangelos E. Papalexkais (PAKDD 2025)*.
 
 ## Installation
-To set up the environment, install the required dependencies:
+To set up the environment, install the required packages:
 ```
 - DotMap
 - tensorly
@@ -11,22 +11,19 @@ To set up the environment, install the required dependencies:
 ```
 
 ## Configuration
-There are configuration for models in `config` directory. 
+There are configuration files for models in `config` directory. 
+Modify `staff_{tf}.yaml` to adjust model hyperparameters. Configuration options include:
+* `wnb_project`: project name for wandb (optional)
+* `tf`: tensor factorization model (cpd or costco)
+* `aug_tf`: selection of tf for augmentation (cpd or costco)
+* `sampling`: augmentation type (knn)
+* `aug_training`: generate augmentation or use saved augmentation
+* `only_aug_save`: wheter to finish the script after saving augmentation
 
-### Model Configuration
-Modify `staff_{tf}.yaml` to adjust parameters such as dataset selection, augmentation methods, and model hyperparameters. Example configuration options include:
-
-```
-- wnb_project: project name for wandb (optional)
-- tf: "cpd" (cpd or costco)
-- aug_tf: "cpd" (same as tf)
-- sampling: "knn" (knn augmentation)
-- aug_training: True (Generate augmentation or use saved augmentation)
-- only_aug_save: True (Finish script after saving augmentation)
-```
-
-### Running Experiments
+## Running Experiments
 To train and evaluate the model, run `run.sh` script or run jupyter notebook in `demo` directory.
+* Pre-trained tensor factorization models are saved in `output/{data}/{tf}` directories.
+* Pre genereated augmentations are saved in `output/{data}/sampling`
 
 ## Dataset
 This directory contains 
