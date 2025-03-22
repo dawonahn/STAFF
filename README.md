@@ -1,4 +1,4 @@
-# Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation
+# STAFF: Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation
 
 This repository contains the Python based implementation for the paper *Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation, Dawon Ahn^, JunGi-Jang^, Evangelos E. Papalexkais (PAKDD 2025)*.
 
