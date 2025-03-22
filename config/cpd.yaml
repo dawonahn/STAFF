@@ -1,0 +1,47 @@
+config:
+  wnb_project: ""
+  tf: "cpd"
+  batch_training: true
+datasets:
+  chicago_area:
+    hparams:
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.01"]       
+        
+  lastfm_time:
+    hparams:
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.01"]
+        wd: ["0.01"]
+
+  oulad:
+    hparams:
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.01"]
+

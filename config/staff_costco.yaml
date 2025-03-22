@@ -1,0 +1,35 @@
+config:
+  wnb_project: ""
+  tf: "costco"
+  aug_tf: "costco"
+  sampling: "knn"
+  group: "both"
+  # aug_training: True
+  # only_aug_save: True
+datasets:
+  lastfm_time:
+    hparams:
+      nc: ["64"]
+      K: ["2"]
+      aug_modes: ["0"]
+      gamma: ["0"]
+      wd2: ["0.01"]
+      rank: [10]
+    unfair:
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.001"]
+
+  oulad:
+    hparams:
+      nc: ["32"]
+      K: ["11"]
+      gamma: ["1"]
+      aug_modes: ["0"]
+      wd2: ["0.00001"]
+      rank: [10]
+    unfair:
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+        

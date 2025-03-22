@@ -1,0 +1,50 @@
+config:
+  wnb_project: ""
+  tf: "costco"
+  batch_training: true
+datasets:
+  chicago_area:
+    hparams:
+      nc: ["32"]
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+        
+  lastfm_time:
+    hparams:
+      nc: ["64"]
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.001"]
+        
+  oulad:
+    hparams:
+      nc: ["32"]
+      rank: [10]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.0001"]
+        

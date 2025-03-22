@@ -1,0 +1,59 @@
+config:
+  wnb_project: ""
+  tf: "cpd"
+  aug_tf: "cpd"
+  sampling: "knn"
+  group: "both"
+  # aug_training: True
+  # only_aug_save: True
+datasets:
+  chicago_area:
+    hparams:
+      K: ["3"]
+      aug_modes: ["1"]
+      wd2: ["1"]
+      gamma: ["0.9"]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.01"]
+
+  lastfm_time:
+    hparams:
+      k: ["3"]
+      wd2: ["1"]
+      aug_modes: ["0"]
+      gamma: ["0.9"]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.001"]
+
+  oulad:
+    hparams:
+      k: ["3"]
+      wd2: ["1"]
+      aug_modes: ["0"]
+      gamma: ["0.9"]
+    unfair:
+      0:
+        lr: ["0.001"]
+        wd: ["0.001"]
+      0.1:
+        lr: ["0.001"]
+        wd: ["0.01"]
+      0.05:
+        lr: ["0.001"]
+        wd: ["0.01"]
